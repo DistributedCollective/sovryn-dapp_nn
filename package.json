@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "prepare": "mkdir ./dist && touch ./dist/index.html",
+    "prepare": "mkdir -p ./dist && touch ./dist/index.html",
     "build": "yarn prepare && echo 'production' >> ./dist/index.html",
     "testnet": "yarn prepare && echo 'testnet' >> ./dist/index.html",
     "staging": "yarn prepare && echo 'staging' >> ./dist/index.html",
