@@ -1,0 +1,17 @@
+{
+  "name": "sovryn-dapp",
+  "version": "0.0.0",
+  "description": "Dapp v2. for Sovryn",
+  "main": "index.js",
+  "repository": "git@github.victor:DistributedCollective/sovryn-dapp.git",
+  "author": "Victor Creed <victor@sovryn.app>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "prepare": "mkdir -p ./dist && touch ./dist/index.html",
+    "build": "yarn prepare && echo 'production' >> ./dist/index.html",
+    "testnet": "yarn prepare && echo 'testnet' >> ./dist/index.html",
+    "staging": "yarn prepare && echo 'staging' >> ./dist/index.html",
+    "preview": "yarn prepare && echo 'preview' >> ./dist/index.html"
+  }
+}
