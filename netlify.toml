@@ -7,10 +7,15 @@
   command = "yarn build"
   [context.production.environment]
     ACCESS_TOKEN = "super secret"
+    APP_MODE = "mainnet"
   # Deploys from main branch run this plugin in the build.
   # Plugins context requires double brackets.
   [[context.production.plugins]]
     package = "@netlify/plugin-sitemap"
+
+
+[context.deploy-preview]
+  command = "yarn preview"
 
 # Deploy Preview context:
 # All deploys generated from a pull/merge request
@@ -19,6 +24,7 @@
 # sensitive values to public source repositories.
 [context.deploy-preview.environment]
   ACCESS_TOKEN = "not so secret"
+  APP_MODE = "testnet"
 
 # Branch deploy context:
 # All deploys that are not from a pull/merge request
@@ -31,6 +37,3 @@
 # and override their current ones.
 [context.development]
   command = "yarn testnet"
-
-[context."feat/*"]
-  command = "yarn preview"
