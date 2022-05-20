@@ -10,3 +10,10 @@
   - to any other branch - staging deployment will be triggered with random url.
 - more rules about deployment can be added to `netlify.toml` config file.
 
+### Skip deploy
+Sometimes, you may want to push commits to your branch without triggering a deploy on Netlify. To do this, add [skip ci] or [skip netlify] anywhere in the Git commit message.
+
+In the case of multiple commits pushed together, add [skip ci] or [skip netlify] to the most recent commit, and it will apply to all other commits in the push.
+
+The next commit pushed without one of those messages will trigger a new deploy, including all changes from the skipped commits as well. To trigger a deploy at will on your production branch, go to your site’s Deploys page and select Trigger deploy at the top of the deploy list.
+
