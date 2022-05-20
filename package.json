@@ -1,0 +1,13 @@
+{
+  "name": "sovryn-dapp",
+  "version": "0.0.0",
+  "description": "Dapp v2. for Sovryn",
+  "main": "index.js",
+  "repository": "git@github.victor:DistributedCollective/sovryn-dapp.git",
+  "author": "Victor Creed <victor@sovryn.app>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "mkdir ./dist && touch ./dist/index.html && echo 'hey' >> ./dist/index.html"
+  }
+}
