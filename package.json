@@ -8,6 +8,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "mkdir ./dist && touch ./dist/index.html && echo 'hey' >> ./dist/index.html"
+    "prepare": "mkdir ./dist && touch ./dist/index.html",
+    "build": "yarn prepare && echo 'production' >> ./dist/index.html",
+    "testnet": "yarn prepare && echo 'testnet' >> ./dist/index.html",
+    "staging": "yarn prepare && echo 'staging' >> ./dist/index.html",
+    "preview": "yarn prepare && echo 'preview' >> ./dist/index.html"
   }
 }
